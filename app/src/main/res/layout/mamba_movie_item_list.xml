@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/movie_image_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            fresco:actualImageScaleType="centerCrop"
+            fresco:layout_constraintTop_toTopOf="parent"
+            fresco:viewAspectRatio="0.5625" />
+
+        <TextView
+            android:id="@+id/movie_movie_title"
+            style="@style/MovieTitle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            fresco:layout_constraintBottom_toBottomOf="@id/movie_image_view" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
