@@ -3,8 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:fresco="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="4dp">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -19,11 +20,21 @@
             fresco:layout_constraintTop_toTopOf="parent"
             fresco:viewAspectRatio="0.5625" />
 
-        <TextView
-            android:id="@+id/movie_movie_title"
-            style="@style/MovieTitle"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            fresco:layout_constraintBottom_toBottomOf="@id/movie_image_view" />
+            android:layout_height="wrap_content"
+            android:background="@color/movieBackground"
+            android:orientation="horizontal"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp"
+            fresco:layout_constraintBottom_toBottomOf="@id/movie_image_view">
+
+            <TextView
+                android:id="@+id/movie_movie_title"
+                style="@style/MovieTitle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </LinearLayout>

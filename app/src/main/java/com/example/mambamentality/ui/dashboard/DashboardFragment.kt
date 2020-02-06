@@ -11,7 +11,9 @@ import com.example.mambamentality.R
 import com.example.mambamentality.adapter.MambaMovieAdapter
 import com.example.mambamentality.api.RetrofitHolder
 import com.example.mambamentality.api.services.MambaService
+import com.example.mambamentality.ui.detail.DetailActivity
 import kotlinx.android.synthetic.main.fragment_dashboard.*
+import kotlinx.android.synthetic.main.mamba_movie_item_list.view.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
@@ -49,5 +51,7 @@ class DashboardFragment : Fragment() {
                 }
             }
         }
+
+
     }
 }

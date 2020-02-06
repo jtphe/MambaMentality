@@ -8,6 +8,8 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mambamentality.R
 import com.example.mambamentality.models.Movie
+import com.example.mambamentality.ui.detail.DetailActivity
+import com.vicpin.krealmextensions.save
 import kotlinx.android.synthetic.main.mamba_movie_item_list.view.*
 
 class MambaMovieAdapter(private val list: List<Movie>) :
@@ -15,7 +17,8 @@ class MambaMovieAdapter(private val list: List<Movie>) :
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MambaViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.mamba_movie_item_list, parent,false)
+        val view = LayoutInflater.from(parent.context)
+            .inflate(R.layout.mamba_movie_item_list, parent, false)
         return MambaViewHolder(view)
     }
 
@@ -29,12 +32,15 @@ class MambaMovieAdapter(private val list: List<Movie>) :
 
     inner class MambaViewHolder(val view: View) : RecyclerView.ViewHolder(view) {
         fun bind(movie: Movie) {
-            Log.d("movie", movie.poster_path.toString())
             view.movie_movie_title.text = movie.title
             val uri: Uri = Uri.parse("https://image.tmdb.org/t/p/w500/" + movie.poster_path)
             val draweeView = view.movie_image_view
 
             draweeView.setImageURI(uri)
+
+            view.movie_image_view.setOnClickListener {
+                DetailActivity.start(it.context, movie.id)
+            }
         }
     }
 }

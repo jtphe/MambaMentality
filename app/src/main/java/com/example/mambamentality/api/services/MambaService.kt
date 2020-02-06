@@ -14,4 +14,16 @@ interface MambaService {
     fun getMambaMovie(
         @Query("api_key") apiKey: String = "66ee102c15b779b77afde5b5948b26c4"
     ): Call<MovieResponse>
+
+    @GET("search/movie")
+    fun getPlayersMovie(
+        @Query("query") query: String,
+        @Query("api_key") apiKey: String = "66ee102c15b779b77afde5b5948b26c4"
+    ): Call<MovieResponse>
+
+    @GET("movie/{movie_id}")
+    fun getMambaMovieDetail(
+        @Path("movie_id") id: String,
+        @Query("api_key") apiKey: String = "66ee102c15b779b77afde5b5948b26c4"
+    ): Call<Movie>
 }

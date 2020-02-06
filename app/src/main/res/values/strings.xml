@@ -4,5 +4,9 @@
     <string name="title_search">Search</string>
     <string name="title_favorite">Favorites</string>
     <string name="text_home">Kobe Bryant movies !</string>
+    <string name="text_search">Find the basketball movies from your favorite players</string>
+    <string name="text_search_btn">Search</string>
+    <string name="text_search_placeholder">Ex: Michael Jordan...</string>
     <string name="btn_skip">Skip</string>
+    <string name="text_detail">Details</string>
 </resources>

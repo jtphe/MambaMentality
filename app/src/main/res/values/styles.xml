@@ -14,20 +14,33 @@
         <item name="android:textAlignment">center</item>
         <item name="android:paddingTop">10dp</item>
         <item name="android:paddingBottom">10dp</item>
-        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textColor">@color/colorAccent</item>
         <item name="android:layout_marginTop">15dp</item>
     </style>
 
     <style name="MovieTitle" parent="TextAppearance.AppCompat.Caption">
         <item name="android:textStyle">bold</item>
         <item name="android:title">14sp</item>
-        <item name="android:textAlignment">center</item>
-        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textColor">@color/colorAccent</item>
         <item name="android:paddingStart">10dp</item>
-        <item name="android:paddingEnd">10dp</item>
-        <item name="android:paddingTop">6dp</item>
-        <item name="android:paddingBottom">6dp</item>
-        <item name="android:background">@color/movieBackground</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="MovieInput" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:layout_marginStart">20dp</item>
+        <item name="android:layout_marginEnd">20dp</item>
+        <item name="android:layout_marginTop">15dp</item>
+        <item name="android:paddingStart">15dp</item>
+        <item name="android:paddingEnd">0dp</item>
+        <item name="android:height">50dp</item>
+    </style>
+
+    <style name="Button" parent="TextAppearance.AppCompat">
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:layout_marginRight">20dp</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:textStyle">bold</item>
     </style>
 
 </resources>
