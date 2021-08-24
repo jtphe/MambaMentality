@@ -14,5 +14,5 @@ Mamba Mentality is an app developped in Kotlin to practice using an api, using a
   
 #### Developer 💻
 
-**[Jean-Thavorak Phe](http://phe.company)**
+**[Jean-Thavorak Phe](https://jtphe.ddns.net)**
   
